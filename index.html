@@ -7,22 +7,25 @@
     <script rel="script" src="index.js"></script>
 </head>
 <body>
-<div id="pop1" class="ParentPop">
+<div id="pop" class="ParentPop">
     <div class="popin">
-        <h2>Première popin</h2>
-        <a href="#" onClick="return hide('pop1')">Close</a>
-    </div>
-</div>
+        <h2>Popin</h2>
+            <label for="prenom">prenom :</label>
+            <input type="text" id="prenom"><br>
 
-<div id="pop2" class="ParentPop">
-    <div class="popin">
-        <h2>Deuxième popin</h2>
-        <a href="#" onClick="return hide('pop2')">Close</a>
+            <label for="nom">nom :</label>
+            <input type="text" id="nom"><br>
+
+            <label for="email">email :</label>
+            <input type="text" id="email" onblur="verifMail(this)"><br>
+
+            <button type="submit">Envoyer</button>
+
+        <a href="#" onClick="return hide('pop')">Close</a>
     </div>
 </div>
 
 <h3>Javascript Pop in</h3>
-<a href="#" onClick="return pop('pop1')">popin 1</a>
-<a href="#" onClick="return pop('pop2')">popin 2</a>
+<a href="#" onClick="return pop('pop')">popin 1</a>
 </body>
 </html>
