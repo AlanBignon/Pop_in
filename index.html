@@ -7,25 +7,23 @@
     <script rel="script" src="index.js"></script>
 </head>
 <body>
+
 <div id="pop" class="ParentPop">
     <div class="popin">
         <h2>Popin</h2>
-            <label for="prenom">prenom :</label>
-            <input type="text" id="prenom"><br>
-
-            <label for="nom">nom :</label>
-            <input type="text" id="nom"><br>
-
             <label for="email">email :</label>
-            <input type="text" id="email" onblur="verifMail(this)"><br>
+            <input type="text" id="email"><br>
 
-            <button type="submit">Envoyer</button>
+            <label for="password">password :</label>
+            <input type="text" id="password"><br>
 
-        <a href="#" onClick="return hide('pop')">Close</a>
+            <span id="alerte"></span><br>
+            <button type="submit" id="button">Envoyer</button>
+
+        <a href="#" id = "close">Close</a>
     </div>
 </div>
-
 <h3>Javascript Pop in</h3>
-<a href="#" onClick="return pop('pop')">popin 1</a>
+<a href="#" id="open">popin 1</a>
 </body>
 </html>
