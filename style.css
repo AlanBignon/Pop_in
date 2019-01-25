@@ -24,3 +24,11 @@ body {
     color: #000;
     background-color: #fff;
 }
+.email {
+    background-color: white;
+}
+
+.button {
+    color: dimgrey;
+    background-color: dimgrey;
+}
