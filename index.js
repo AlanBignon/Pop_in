@@ -10,12 +10,11 @@ function init()
 {
     let oA = document.getElementById('button');
 
-    oA.onclick = function()
-    {
+    oA.addEventListener("click", function() {
         verifMail();
         verifPassword();
         return false;
-    };
+    })
 }
 
 function surligne(erreur) {
