@@ -37,6 +37,7 @@ function verifPassword() {
     if (pass === "")
     {
         document.getElementById('alerte').innerHTML = "Veuillez rentrez un mot de passe.";
+        document.getElementById('button').style.backgroundColor = ''; // ajout du changement de couleur quand les infos donnés snt fausses
         return false;
     }
     else
@@ -44,6 +45,7 @@ function verifPassword() {
         if (verifMail())
         {
             document.getElementById('alerte').innerHTML = "Vos renseignement sont valides.";
+            document.getElementById('button').style.backgroundColor = 'grey'; // ajout de la couleur grise au bouton quand les données rentrés sont bonnes
         }
     }
 }
@@ -70,23 +72,26 @@ function close()
 {
     let set = document.getElementById('close');
 
-    set.onclick = function()
-    {
+    set.addEventListener("click", function() {
         hide();
         return false;
-    };
+    })
 }
 
 function open()
 {
     let set = document.getElementById('open');
 
-    set.onclick = function()
-    {
+    set.addEventListener("click", function() {
         show();
         return false
-    };
+    })
 }
 
+//changement du window.onload
 
-window.onload = function() { init(); open(); close() };
+window.addEventListener('load', function (){
+    init();
+    open();
+    close();
+});
